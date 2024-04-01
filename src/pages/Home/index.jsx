@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  Container,
+  HomeContainer,
   Background,
   Details,
   TextsCover,
@@ -12,11 +12,11 @@ import {
 const Home = () => {
   return (
     <>
-      <Container>
+      <HomeContainer>
         <Background />
         <Details>
           <TextsCover>
-            <h5>So, you want to travel to</h5>
+            <h5 className="text--blue">So, you want to travel to</h5>
             <h1>Space</h1>
             <p>
               Let’s face it; if you want to go to space, you might as well
@@ -31,7 +31,7 @@ const Home = () => {
             <ButtonHoverElement />
           </Button>
         </Details>
-      </Container>
+      </HomeContainer>
     </>
   );
 };

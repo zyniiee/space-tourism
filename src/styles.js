@@ -84,6 +84,7 @@ table {
     src: url(${Bellefair});
   }
   :root {
+    --darkGrey: #383b4b;
     --darkBlue: #0b0d17;
     --lightBlue: #d0d6f9;
     --white: #ffffff;
@@ -127,8 +128,11 @@ table {
     font-size: 100px;
     line-height: 1;
     text-transform: uppercase;
-    @media only screen and (max-width:768px ) {
-      font-size: 56px;
+       @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 80px;
+    }
+    @media (max-width: 768px) {
+        font-size: 56px;
     }
   }
   h3{
@@ -149,8 +153,7 @@ table {
     font-size: 28px;
     line-height: 1;
     text-transform: uppercase;
-    letter-spacing: 4.75px;
-    color: var(--lightBlue);
+    letter-spacing: 4.72px;
      @media (min-width: 768px) and (max-width: 1024px) {
       font-size: 20px;
       letter-spacing: 3.38px;
@@ -160,18 +163,22 @@ table {
       letter-spacing: 2.7px;
     }
   }
+  .text--blue {
+    color: var(--lightBlue);
+  }
   .subheading-1 {
     font-family: 'Bellefair';
     font-size: 28px;
     line-height: 1;
     text-transform: uppercase;
+    color: var(--white);
   }
   .subheading-2 {
     font-family: 'BarlowCondensedRegular';
     font-size: 14px;
     line-height: 1;
     text-transform: uppercase;
-    letter-spacing: 4.25px;
+    letter-spacing: 2.36px;
   }
   .nav_text {
     font-family: 'BarlowCondensedRegular';
@@ -188,7 +195,7 @@ table {
     }
   }
   p {
-    color: var(--lightBlue)
+    color: var(--lightBlue);
   }
 
 `;

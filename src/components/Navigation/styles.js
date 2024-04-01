@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Nav = styled.nav`
   padding-top: 2rem;
@@ -63,11 +63,15 @@ export const Span = styled.span`
 `;
 export const Li = styled.li`
   padding: 2rem 0;
+  transition: border-bottom 0.3s ease-in-out;
   &.active {
     border-bottom: 3px solid var(--white);
   }
   @media (max-width: 768px) {
     padding: 0.5rem 0;
+  }
+  &:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
   }
 `;
 export const Line = styled.div`
