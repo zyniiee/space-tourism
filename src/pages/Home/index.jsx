@@ -1,5 +1,13 @@
 import React from "react";
-import { Container, Background, Details, TextsCover, Button } from "./styles";
+import { Link } from "react-router-dom";
+import {
+  Container,
+  Background,
+  Details,
+  TextsCover,
+  Button,
+  ButtonHoverElement,
+} from "./styles";
 
 const Home = () => {
   return (
@@ -17,7 +25,11 @@ const Home = () => {
               this world experience!
             </p>
           </TextsCover>
-          <Button>Explore</Button>
+
+          <Button as={Link} to="/destination">
+            Explore
+            <ButtonHoverElement />
+          </Button>
         </Details>
       </Container>
     </>

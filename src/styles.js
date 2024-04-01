@@ -41,6 +41,7 @@ ol, ul {
 a {
    text-decoration: none; 
    color: var(--white);
+   cursor: pointer;
 }
 blockquote, q {
 	quotes: none;
@@ -149,6 +150,7 @@ table {
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 4.75px;
+    color: var(--lightBlue);
      @media (min-width: 768px) and (max-width: 1024px) {
       font-size: 20px;
       letter-spacing: 3.38px;
@@ -184,6 +186,9 @@ table {
       font-size: 16px;
       letter-spacing: 2.7px;
     }
+  }
+  p {
+    color: var(--lightBlue)
   }
 
 `;

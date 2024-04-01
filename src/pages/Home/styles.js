@@ -90,6 +90,12 @@ export const Button = styled.div`
   height: 15rem;
   align-self: flex-end;
   justify-self: flex-end;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.01);
+  }
   @media (min-width: 768px) and (max-width: 1024px) {
     align-self: center;
     justify-self: center;
@@ -100,5 +106,25 @@ export const Button = styled.div`
     font-size: 20px;
     width: 10rem;
     height: 10rem;
+  }
+`;
+export const ButtonHoverElement = styled.div`
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: width 300ms cubic-bezier(0.25, 0.1, 0.25, 1),
+    height 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  z-index: 2;
+  ${Button}:hover & {
+    width: 20rem;
+    height: 20rem;
+  }
+  @media (max-width: 768px) {
+    ${Button}:hover & {
+      width: 15rem;
+      height: 15rem;
+    }
   }
 `;

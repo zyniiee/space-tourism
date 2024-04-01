@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Nav = styled.nav`
   padding-top: 2rem;
@@ -13,7 +13,18 @@ export const Nav = styled.nav`
     padding-top: 0;
   }
   @media (max-width: 768px) {
-    padding-top: 2rem;
+    align-items: flex-start;
+  }
+`;
+export const NavMobile = styled.div`
+  display: none;
+  position: fixed;
+  right: 2rem;
+  top: 3rem;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+    display: flex;
   }
 `;
 export const Ul = styled.ul`
@@ -31,7 +42,11 @@ export const Ul = styled.ul`
     padding-left: 3rem;
   }
   @media (max-width: 768px) {
-    display: none;
+    display: ${(props) => (props.isOpen ? "flex" : "none")};
+    padding: 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
   }
 `;
 
@@ -48,10 +63,16 @@ export const Span = styled.span`
 `;
 export const Li = styled.li`
   padding: 2rem 0;
+  &.active {
+    border-bottom: 3px solid var(--white);
+  }
+  @media (max-width: 768px) {
+    padding: 0.5rem 0;
+  }
 `;
 export const Line = styled.div`
-  height: 0.5px;
-  background-color: var(--white);
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
   width: 80%;
   position: absolute;
   left: 6rem;
