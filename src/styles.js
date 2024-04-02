@@ -140,13 +140,24 @@ table {
     font-size: 56px;
     line-height: 1;
     text-transform: uppercase;
+    @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 40px;
+    }
+    @media (max-width: 768px) {
+          font-size: 24px;
+    }
   }
   h4 {
     font-family: 'Bellefair';
     font-size: 32px;
     text-transform: uppercase;
     line-height: 1;
-
+    @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 24px;
+    }
+    @media (max-width: 768px) {
+    font-size: 16px;
+    }
   }
   h5 {
     font-family: 'BarlowCondensedRegular';

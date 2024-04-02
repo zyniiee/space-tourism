@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  padding-top: 2rem;
-  padding-left: 2rem;
+  box-sizing: border-box;
+  padding: 4rem 0 0 4rem;
   width: 100%;
   display: grid;
   align-items: center;
@@ -10,32 +10,32 @@ export const Nav = styled.nav`
   position: fixed;
   z-index: 3;
   @media (min-width: 768px) and (max-width: 1024px) {
-    padding-top: 0;
+    padding: 2rem 0 0 2rem;
   }
   @media (max-width: 768px) {
     align-items: flex-start;
+    padding: 2rem;
   }
 `;
 export const NavMobile = styled.div`
+  position: relative;
+  align-self: center;
+  justify-self: flex-end;
   display: none;
-  position: fixed;
-  right: 2rem;
-  top: 3rem;
   z-index: 2;
-
   @media (max-width: 768px) {
     display: flex;
   }
 `;
 export const Ul = styled.ul`
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(10px);
   padding-left: 6rem;
   @supports not (backdrop-filter: blur(1px)) {
-    background-color: rgba(255, 255, 255, 0.5); /* Fallback background color */
+    background-color: var(--darkBlue);
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     gap: 3rem;
@@ -43,9 +43,12 @@ export const Ul = styled.ul`
   }
   @media (max-width: 768px) {
     display: ${(props) => (props.isOpen ? "flex" : "none")};
-    padding: 3rem;
+    right: 0rem;
+    top: 1rem;
+    padding: 4rem 5rem 4rem 3rem;
+    position: absolute;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: start;
     gap: 1.5rem;
   }
 `;
@@ -77,7 +80,7 @@ export const Li = styled.li`
 export const Line = styled.div`
   height: 1px;
   background-color: rgba(255, 255, 255, 0.25);
-  width: 80%;
+  width: calc(100% - 4rem);
   position: absolute;
   left: 6rem;
   z-index: 1;

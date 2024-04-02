@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { destinations } from "../../data";
 import {
-  DestinationContainer,
+  MainContainer,
   DetailsContainer,
   Background,
   Span,
@@ -11,6 +11,7 @@ import {
   TextsContainer,
   InfoContaier,
   InfoText,
+  StyledTabs,
   StyledTabList,
   StyledTab,
   MobileHidden,
@@ -21,12 +22,12 @@ const Destination = () => {
     setActiveDestination(destinations[index]);
   };
   return (
-    <DestinationContainer>
+    <MainContainer>
       <Background />
       <h5>
         <Span>01</Span>Pick your destination
       </h5>
-      <Tabs onSelect={handleTabClick}>
+      <StyledTabs onSelect={handleTabClick}>
         <DetailsContainer>
           <MobileHidden />
           <StyledTabList>
@@ -59,8 +60,8 @@ const Destination = () => {
             </DetailsContainer>
           </TabPanel>
         ))}
-      </Tabs>
-    </DestinationContainer>
+      </StyledTabs>
+    </MainContainer>
   );
 };
 

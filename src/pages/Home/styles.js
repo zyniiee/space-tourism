@@ -8,13 +8,14 @@ export const HomeContainer = styled.div`
   align-items: flex-end;
   box-sizing: border-box;
   @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 12rem 2rem;
     width: 100%;
     height: 100%;
   }
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
-    padding: 2rem;
+    padding: 6rem 2rem;
   }
 `;
 
@@ -42,18 +43,14 @@ export const Background = styled.div`
 `;
 
 export const Details = styled.div`
-  width: 100%;
-  max-width: calc(100% - 4rem);
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   @media (min-width: 768px) and (max-width: 1024px) {
-    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   @media (max-width: 768px) {
-    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

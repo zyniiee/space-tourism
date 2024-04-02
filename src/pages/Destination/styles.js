@@ -1,44 +1,46 @@
 import styled from "styled-components";
-import { TabList, Tab, TabPanel } from "react-tabs";
+import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 
-export const DestinationContainer = styled.div`
-  width: 100%;
+export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: start;
   gap: 4rem;
-  padding: 10rem 8rem;
-  align-items: flex-start;
+  padding: 15rem 8rem 5rem 8rem;
   box-sizing: border-box;
   @media (min-width: 768px) and (max-width: 1024px) {
-    padding: 8rem 2rem;
+    padding: 12rem 2rem;
     width: 100%;
     height: 100%;
     gap: 2rem;
   }
   @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-    padding: 6rem 4rem;
+    padding: 8rem 2rem;
     align-items: center;
     gap: 2rem;
   }
 `;
 export const DetailsContainer = styled.div`
+  max-width: 1440px;
+  width: 100%;
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: 0.75fr 1fr;
-  gap: 5rem;
-  align-items: center;
+  gap: 8rem;
+  align-items: start;
   @media (min-width: 768px) and (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 3rem;
+    align-items: center;
   }
   @media (max-width: 768px) {
     flex-direction: column;
     display: flex;
     gap: 3rem;
     margin-top: 2rem;
+    align-items: center;
   }
 `;
 export const MobileHidden = styled.div`
@@ -101,7 +103,7 @@ export const Background = styled.div`
     no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Make the background fixed */
+  background-attachment: fixed;
   @media (min-width: 768px) and (max-width: 1024px) {
     background: url("/assets/destination/background-destination-tablet.jpg")
       no-repeat;
@@ -130,6 +132,14 @@ export const Line = styled.div`
   width: 100%;
   height: 1px;
 `;
+
+export const StyledTabs = styled(Tabs)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`;
+
 export const StyledTabList = styled(TabList)`
   display: flex;
   list-style-type: none;
@@ -148,6 +158,9 @@ export const StyledTab = styled(Tab)`
   &.react-tabs__tab--selected {
     color: var(--white);
     border-bottom: 3px solid var(--white);
+  }
+  &:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
   }
   @media (min-width: 768px) and (max-width: 1024px) {
     margin: 0 1rem;
