@@ -33,7 +33,7 @@ const Navigation = () => {
     <Nav ref={navRef}>
       <LogoContainer>
         <NavLink to="/" onClick={closeMenu}>
-          <img src="./assets/shared/logo.svg" alt="logo" />
+          <img src="./space-tourism/assets/shared/logo.svg" alt="logo" />
         </NavLink>
         <Line />
       </LogoContainer>
@@ -41,8 +41,8 @@ const Navigation = () => {
         <img
           src={
             isOpen
-              ? "./assets/shared/icon-close.svg"
-              : "./assets/shared/icon-hamburger.svg"
+              ? "./space-tourism/assets/shared/icon-close.svg"
+              : "./space-tourism/assets/shared/icon-hamburger.svg"
           }
           alt={isOpen ? "Close" : "Open"}
         />
