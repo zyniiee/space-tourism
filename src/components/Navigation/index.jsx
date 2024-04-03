@@ -32,8 +32,8 @@ const Navigation = () => {
   return (
     <Nav ref={navRef}>
       <LogoContainer>
-        <NavLink to="/" onClick={closeMenu}>
-          <img src="./space-tourism/assets/shared/logo.svg" alt="logo" />
+        <NavLink to="/space-tourism" onClick={closeMenu}>
+          <img src="/space-tourism/assets/shared/logo.svg" alt="logo" />
         </NavLink>
         <Line />
       </LogoContainer>
@@ -41,14 +41,18 @@ const Navigation = () => {
         <img
           src={
             isOpen
-              ? "./space-tourism/assets/shared/icon-close.svg"
-              : "./space-tourism/assets/shared/icon-hamburger.svg"
+              ? "/space-tourism/assets/shared/icon-close.svg"
+              : "/space-tourism/assets/shared/icon-hamburger.svg"
           }
           alt={isOpen ? "Close" : "Open"}
         />
       </NavMobile>
       <Ul isOpen={isOpen}>
-        <Li className={`nav_text ${location.pathname === "/" ? "active" : ""}`}>
+        <Li
+          className={`nav_text ${
+            location.pathname === "/space-tourism" ? "active" : ""
+          }`}
+        >
           <NavLink exact to="/" activeClassName="active" onClick={closeMenu}>
             <Span>00</Span>Home
           </NavLink>

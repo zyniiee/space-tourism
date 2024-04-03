@@ -8,19 +8,19 @@ export const Background = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("./space-tourism/assets/technology/background-technology-desktop.jpg")
+  background: url("/space-tourism/assets/technology/background-technology-desktop.jpg")
     no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   @media (min-width: 768px) and (max-width: 1024px) {
-    background: url("./space-tourism/assets/technology/background-technology-tablet.jpg")
+    background: url("/space-tourism/assets/technology/background-technology-tablet.jpg")
       no-repeat;
     background-size: cover;
     background-position: center;
   }
   @media (max-width: 768px) {
-    background: url("./space-tourism/assets/technology/background-technology-mobile.jpg")
+    background: url("/space-tourism/assets/technology/background-technology-mobile.jpg")
       no-repeat;
     background-size: cover;
     background-position: center;
