@@ -1,4 +1,4 @@
-import { React, useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { Nav, Ul, Span, Li, Line, LogoContainer, NavMobile } from "./styles";
 
@@ -53,17 +53,22 @@ const Navigation = () => {
             location.pathname === "/space-tourism" ? "active" : ""
           }`}
         >
-          <NavLink exact to="/" activeClassName="active" onClick={closeMenu}>
+          <NavLink
+            exact
+            to="/space-tourism"
+            activeClassName="active"
+            onClick={closeMenu}
+          >
             <Span>00</Span>Home
           </NavLink>
         </Li>
         <Li
           className={`nav_text ${
-            location.pathname === "/destination" ? "active" : ""
+            location.pathname === "/space-tourism/destination" ? "active" : ""
           }`}
         >
           <NavLink
-            to="/destination"
+            to="/space-tourism/destination"
             activeClassName="active"
             onClick={closeMenu}
           >
@@ -72,20 +77,24 @@ const Navigation = () => {
         </Li>
         <Li
           className={`nav_text ${
-            location.pathname === "/crew" ? "active" : ""
+            location.pathname === "/space-tourism/crew" ? "active" : ""
           }`}
         >
-          <NavLink to="/crew" activeClassName="active" onClick={closeMenu}>
+          <NavLink
+            to="/space-tourism/crew"
+            activeClassName="active"
+            onClick={closeMenu}
+          >
             <Span>02</Span>Crew
           </NavLink>
         </Li>
         <Li
           className={`nav_text ${
-            location.pathname === "/technology" ? "active" : ""
+            location.pathname === "/space-tourism/technology" ? "active" : ""
           }`}
         >
           <NavLink
-            to="/technology"
+            to="/space-tourism/technology"
             activeClassName="active"
             onClick={closeMenu}
           >
