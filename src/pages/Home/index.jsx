@@ -26,7 +26,7 @@ const Home = () => {
             </p>
           </TextsCover>
 
-          <Button as={Link} to="/destination">
+          <Button as={Link} to="/space-tourism/destination">
             Explore
             <ButtonHoverElement />
           </Button>
